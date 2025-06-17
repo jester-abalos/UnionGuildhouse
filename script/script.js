@@ -1,54 +1,85 @@
-function toggleMenu() {
-  document.querySelector('.nav-links').classList.toggle('active');
-}
 
-  function openModal(url) {
-      const modal = document.getElementById("modal");
-      const content = document.getElementById("modal-content");
-      modal.style.display = "block";
-      content.innerHTML = "Loading...";
+    
+    // Modal Control
+        const modal = document.getElementById('terms-modal');
+        const openModalLink = document.getElementById('open-modal');
+        const closeModalButton = document.getElementById('close-modal');
+        const modalAgreeButton = document.getElementById('modal-agree-button');
+        const modalBody = document.querySelector('.modal-body');
+        const termsCheckbox = document.getElementById('agree-checkbox');
+        const contactTermsCheckbox = document.getElementById('contact-terms-checkbox');
+        const submitButton = document.getElementById('submit-button');
 
-      fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          content.innerHTML = doc.body.innerHTML;
-        })
-        .catch(err => {
-          content.innerHTML = "<p>Failed to load content.</p>";
-          console.error(err);
+        openModalLink.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         });
-    }
 
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Scroll Tracking for Terms
+        modalBody.addEventListener('scroll', () => {
+            const scrollBottom = modalBody.scrollHeight - modalBody.clientHeight - 10;
+            if (modalBody.scrollTop >= scrollBottom) {
+                termsCheckbox.disabled = false;
+                modalAgreeButton.disabled = false;
+            }
+        });
+
+        // Sync Checkboxes
+        termsCheckbox.addEventListener('change', () => {
+            contactTermsCheckbox.checked = termsCheckbox.checked;
+            updateSubmitButton();
+        });
+
+        // Agree Button in Modal
+        modalAgreeButton.addEventListener('click', () => {
+            if (termsCheckbox.checked) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Enable Submit Button
+        function updateSubmitButton() {
+            submitButton.disabled = !contactTermsCheckbox.checked;
+        }
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (contactTermsCheckbox.checked) {
+                const formData = new FormData(contactForm);
+                const data = {
+                    first_name: formData.get('first_name'),
+                    last_name: formData.get('last_name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    service: formData.get('service'),
+                    message: formData.get('message')
+                };
+                alert(`Thank you, ${data.first_name}! Your inquiry about ${data.service} has been submitted. We'll get back to you at ${data.email}.`);
+                contactForm.reset();
+                termsCheckbox.checked = false;
+                contactTermsCheckbox.checked = false;
+                termsCheckbox.disabled = true;
+                modalAgreeButton.disabled = true;
+                submitButton.disabled = true;
+            }
+        });
+    
+
 
     
-    
-
-
-    // Optional: Close modal on outside click
-    window.onclick = function(event) {
-      const modal = document.getElementById("modal");
-      if (event.target === modal) {
-        closeModal();
-      }
-    }
-
-
-   emailjs.init("oNr9W0Jda6zBQX8CI");
-
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-   emailjs.send("TogetherweFly!2025","template_pp588ci", this)
-      .then(() => {
-        alert("Message sent successfully!");
-        this.reset();
-      }, (error) => {
-        alert("Message failed to send:\n" + error.text);
-      });
-  });
   

@@ -77,6 +77,61 @@
     </div>
   </section>
 
+
+  <section class="core-values">
+    <div class = "core-text">
+    <h1>Core Values</h1>
+
+    <h2>1. Initiative Over Waiting</h2>
+    <em>We take action and lead projects forward, creating opportunities rather than waiting for them.</em><br><br>
+
+    <h2>2. Purposeful Creativity</h2>
+     <em> Every design choice and strategy is intentional—crafted to deliver real impact and meaningful results.</em><br><br>
+
+    <h2>3. Collaborative Spirit</h2>
+     <em>We work as a unified team, combining our individual strengths to achieve shared success.</em><br><br>
+
+     <h2>4. Excellence in Execution</h2>
+     <em>From the smallest detail to the final output, we hold ourselves to the highest standards of quality and professionalism.</em><br><br>
+
+     <h2>5. Growth Through Innovation</h2>
+      <em>We embrace change, experiment boldly, and continuously seek smarter, better ways to serve our clients.</em><br><br>
+  </div>
+  </section>
+
+  <section class="mission">
+    <div class="mission-text">
+      <h1>Mission</h1>
+      <p>
+       To empower businesses, brands, and communities through unified digital craftsmanship. 
+       We aim to deliver high-quality web design, graphic design, digital marketing, and 
+       multimedia services by leveraging the collective expertise of our talented freelancers. 
+       With creativity, collaboration, and purpose, we bring visions to life.
+      </p>
+      </div>
+    </section>
+
+  <section class="vision">
+      <div class="vision-text">
+      <h1>Vision</h1>
+      <p>
+        To be a modern guild of digital creatives who inspire change, shape brands, 
+        and elevate storytelling across platforms. We envision a future where creativity is 
+        not passive but proactive, where ideas are brought to life not just by imagination, but 
+        by deliberate and unified action. Because we believe that vision only becomes real when we 
+        dare to act, create, and lead.
+      </p>
+    </div>
+  </section>
+
+   <section class="tagline">
+      <div class="tagline-text">
+      <p>
+        “Creative by nature. Driven by purpose.”
+      </p>
+    </div>
+  </section>
+
   <!-- Portfolio Section -->
   <section class="portfolio" id="team">
     <div class="portfolio-header">
@@ -237,37 +292,127 @@
     </div>
   </section>
 <!-- Contact Section -->
-<section class="contact" id="contact">
-  <p class="section-subtitle">Get In Touch</p>
-  <h2>Contact Us</h2>
-  <p class="contact-description">Send us a message for more inquiries</p>
+        <section class="contact" id="contact">
+            <p class="section-subtitle">Get In Touch</p>
+            <h2>Contact Us</h2>
+            <p class="contact-description">Send us a message for more inquiries</p>
 
-  <form id="contact-form">
-  <div class="form-row">
-    <input type="text" name="first_name" placeholder="First name" required />
-    <input type="text" name="last_name" placeholder="Last name" required />
-  </div>
-  <div class="form-row">
-    <input type="email" name="email" placeholder="Email" required />
-    <input type="tel" name="phone" placeholder="Phone number" />
-  </div>
-  <div class="form-row">
-    <select name="service" required>
-      <option value="">Select one...</option>
-      <option value="web">Web & Digital Services</option>
-      <option value="branding">Graphic Design</option>
-      <option value="marketing">Digital Marketing Support</option>
-      <option value="animation">Animation & Audio Production</option>
-    </select>
-  </div>
-  <textarea name="message" placeholder="Type your message..." required></textarea>
-  <label class="terms">
-    <input type="checkbox" required />
-    I accept the terms
-  </label>
-  <button type="submit" class="btn-submit">Submit</button>
-</form>
-</section>
+            <form id="contact-form">
+                <div class="form-row">
+                    <input type="text" name="first_name" placeholder="First name" required />
+                    <input type="text" name="last_name" placeholder="Last name" required />
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email" required />
+                    <input type="tel" name="phone" placeholder="Phone number" />
+                </div>
+                <div class="form-row">
+                    <select name="service" required>
+                        <option value="">Select one...</option>
+                        <option value="web">Web & Digital Services</option>
+                        <option value="branding">Graphic Design</option>
+                        <option value="marketing">Digital Marketing Support</option>
+                        <option value="animation">Animation & Audio Production</option>
+                    </select>
+                </div>
+                <textarea name="message" placeholder="Type your message..." required></textarea>
+                <label class="terms">
+                    <input type="checkbox" id="contact-terms-checkbox" disabled required />
+                    I accept the <span class="terms-link" id="open-modal">terms & conditions</span>
+                </label>
+                <p class="terms-helper">Please click ‘terms & conditions’ to read and accept the Terms and Conditions.</p>
+                <button type="submit" id="submit-button" class="btn-submit" disabled>Submit</button>
+            </form>
+        </section>
+
+   <!-- Modal for Terms and Conditions -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-xl font-semibold">Terms and Conditions</h2>
+                <button class="close-button" id="close-modal">×</button>
+            </div>
+            <div class="modal-body scrollbar-custom">
+                <p class="mb-4">These Terms and Conditions ("Agreement") govern all services provided by Union Guildhouse, a digital creative agency based in the Philippines, to clients worldwide. By engaging with our services, the Client agrees to be bound by the terms set forth below.</p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">1. Services Offered</h3>
+                <p class="mb-2">Union Guildhouse offers creative and technical services across four main categories:</p>
+                <h4 class="text-lg font-medium mt-4">A. Web & Digital Services</h4>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Custom Website Design & Development</li>
+                    <li>Responsive Design and CMS Integration</li>
+                    <li>UI/UX Design for enhanced user experiences</li>
+                    <li>Website Maintenance & Technical Support</li>
+                </ul>
+                <h4 class="text-lg font-medium mt-4">B. Graphic Design</h4>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Brand Identity Design (logos, business cards, letterheads)</li>
+                    <li>Marketing Materials (flyers, brochures, posters)</li>
+                    <li>Social Media Graphics & Ad Creatives</li>
+                    <li>Infographics and Presentation Design</li>
+                </ul>
+                <h4 class="text-lg font-medium mt-4">C. Digital Marketing Support</h4>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Social Media Content Management & Scheduling</li>
+                    <li>Email Marketing Campaign Design</li>
+                    <li>SEO Basics and On-Page Optimization</li>
+                </ul>
+                <h4 class="text-lg font-medium mt-4">D. Animation & Audio Production</h4>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Ads Animation & Motion Graphics</li>
+                    <li>Song Production and Audio Editing</li>
+                </ul>
+                <p class="mb-4">All work will be executed by a team of specialists and coordinated by a project lead for each client engagement.</p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">2. Payment Terms</h3>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>A 50% non-refundable, non-negotiable down payment is required to initiate any project.</li>
+                    <li>The remaining 50% balance is payable upon project completion, prior to delivery of final assets or going live.</li>
+                    <li>Accepted payment methods:
+                        <ul class="list-circle ml-6 mt-2">
+                            <li>Bank Transfer (Local and International)</li>
+                            <li>Wise (formerly TransferWise)</li>
+                            <li>Binance (USDT, BUSD, or agreed stablecoins)</li>
+                        </ul>
+                    </li>
+                    <li>Any transaction fees or currency conversion charges are the responsibility of the Client.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">3. Project Delivery & Revisions</h3>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>All projects include two (2) rounds of revisions per major deliverable.</li>
+                    <li>Further revisions or changes outside the agreed scope will incur additional costs.</li>
+                    <li>The Client agrees to respond within 3 business days per feedback request to maintain the project timeline.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">4. Ownership & Portfolio Rights</h3>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Final ownership of deliverables transfers to the Client upon full payment.</li>
+                    <li>Union Guildhouse retains the right to showcase completed work in its portfolio and promotional materials unless confidentiality is requested in writing.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">5. Confidentiality</h3>
+                <p class="mb-4">Union Guildhouse commits to maintaining the confidentiality of all client files, credentials, communications, and strategies. This obligation remains effective after project closure.</p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">6. Termination & Refunds</h3>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Either party may terminate the project with written notice.</li>
+                    <li>The Client must compensate for all completed work up to the termination date.</li>
+                    <li>The 50% down payment remains non-refundable under all circumstances.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">7. Jurisdiction</h3>
+                <p class="mb-4">This agreement is governed by the laws of the Republic of the Philippines. Any disputes will be resolved through proper legal channels within Philippine jurisdiction.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="flex items-center">
+                    <input type="checkbox" id="agree-checkbox" class="h-5 w-5 text-[#6c63ff] focus:ring-[#6c63ff] border-gray-300 rounded" disabled>
+                    <label for="agree-checkbox" class="ml-2 text-gray-700">I have read and agree to the Terms and Conditions</label>
+                </div>
+                <button id="modal-agree-button" class="modal-button" disabled>Agree</button>
+            </div>
+        </div>
+    </div>
 
 <!-- Footer -->
 <footer class="footer">
@@ -299,7 +444,6 @@
 
 <!-- Load EmailJS library -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="./script/email_connection.js">
-</script>
+<script src="./script/email_connection.js"></script>
 </body>
 </html>

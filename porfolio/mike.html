@@ -1,70 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Developer Portfolio</title>
-    <link rel="stylesheet" href="/style/mike.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link href="/style/mike.css" rel="stylesheet">
 </head>
-<body>
-    <section id="home">
-        <img src=".\assets\img\homer.png" alt="Your Profile Photo" class="profile-img">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hi, I'm Christian Mike B. Pagasian, a passionate developer creating innovative web solutions.</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a skilled web developer with experience in building responsive and user-friendly websites. I love turning ideas into functional, beautiful digital experiences.</p>
-                <p>My expertise spans front-end and back-end technologies, and I'm always eager to learn new tools and frameworks.</p>
-            </div>
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-3xl font-extrabold gradient-text">My Portfolio</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="/landing page.html" class="hover:text-blue-600 font-medium transition-colors duration-300">Home</a>
+          <a href="#about" class="hover:text-blue-600 font-medium transition-colors duration-300">About</a>
+          <a href="#skills" class="hover:text-blue-600 font-medium transition-colors duration-300">Skills</a>
+          <a href="#projects" class="hover:text-blue-600 font-medium transition-colors duration-300">Projects</a>
+          <a href="#contact" class="hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
         </div>
-    </section>
-    <section id="about-skill">
-    <div class="skills">
-                <h3>Skills</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-   </section>
-   
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150" alt="Project One" class="project-img">
-                <h3>Project One</h3>
-                <p>A responsive e-commerce website built with HTML, CSS, and JavaScript.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150" alt="Project Two" class="project-img">
-                <h3>Project Two</h3>
-                <p>A task management app using React and Node.js for efficient workflow.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150" alt="Project Three" class="project-img">
-                <h3>Project Three</h3>
-                <p>A portfolio site showcasing my skills, built with modern web technologies.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
-    </section>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="px-4 pt-2 pb-3 space-y-1">
+          <a href="/landing page.html" class="block hover:text-blue-600 font-medium">Home</a>
+          <a href="#about" class="block hover:text-blue-600 font-medium">About</a>
+          <a href="#skills" class="block hover:text-blue-600 font-medium">Skills</a>
+          <a href="#projects" class="block hover:text-blue-600 font-medium">Projects</a>
+          <a href="#contact" class="block hover:text-blue-600 font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <footer>
-        <p>© 2025 Christian Mike B. Pagasian. All rights reserved.</p>
-    </footer>
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-24 section-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 gradient-text animate__animated animate__fadeIn">Hi, I'm Christian Mike Pagasian</h1>
+      <p class="text-lg sm:text-xl mb-6 animate__animated animate__fadeIn animate__delay-1s">Crafting innovative and responsive web experiences with passion</p>
+      <a href="#contact" class="custom-btn inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-300">Get in Touch</a>
+    </div>
+  </section>
 
-    <script src="function.js"></script>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white section-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+          <img src="https://via.placeholder.com/400" alt="Profile" class="rounded-full mx-auto w-72 h-72 object-cover shadow-lg animate__animated animate__zoomIn">
+        </div>
+        <div class="md:w-1/2">
+          <p class="text-lg leading-relaxed animate__animated animate__fadeIn animate__delay-1s">
+            I'm a dedicated developer with a knack for creating seamless, user-focused applications. My expertise spans modern web technologies, and I thrive on transforming ideas into elegant, functional solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Expertise Section -->
+  <section id="skills" class="py-20 bg-gray-50 section-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill Card 1 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp">
+          <h3 class="text-xl font-semibold mb-2">HTML & CSS</h3>
+          <p class="text-gray-600">Advanced proficiency in crafting responsive, semantic, and visually appealing web layouts.</p>
+        </div>
+        <!-- Skill Card 2 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-1s">
+          <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+          <p class="text-gray-600">Strong expertise in building dynamic, interactive web applications.</p>
+        </div>
+        <!-- Skill Card 3 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-2s">
+          <h3 class="text-xl font-semibold mb-2">React</h3>
+          <p class="text-gray-600">Proficient in developing scalable, component-based user interfaces.</p>
+        </div>
+        <!-- Skill Card 4 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp">
+          <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+          <p class="text-gray-600">Experienced in creating efficient server-side applications and APIs.</p>
+        </div>
+        <!-- Skill Card 5 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-1s">
+          <h3 class="text-xl font-semibold mb-2">Python</h3>
+          <p class="text-gray-600">Skilled in scripting, automation, and backend development.</p>
+        </div>
+        <!-- Skill Card 6 -->
+        <div class="skill-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-2s">
+          <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">Competent in designing intuitive and user-friendly interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gray-100 py-20 section-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">My Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="project-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Project One</h3>
+          <p class="text-gray-600 mb-4">A web app built with cutting-edge tech to tackle real-world challenges.</p>
+          <a href="#" class="custom-btn inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700">View Project</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="project-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-1s">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Project Two</h3>
+          <p class="text-gray-600 mb-4">A mobile-first site optimized for speed and exceptional user experience.</p>
+          <a href="#" class="custom-btn inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700">View Project</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="project-card bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp animate__delay-2s">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Project Three</h3>
+          <p class="text-gray-600 mb-4">A tool designed to enhance productivity with intuitive workflows.</p>
+          <a href="#" class="custom-btn inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white section-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-8 gradient-text animate__animated animate__fadeIn">Get in Touch</h2>
+      <p class="text-lg mb-6 animate__animated animate__fadeIn animate__delay-1s">Excited to collaborate? Reach out and let's create something amazing!</p>
+      <div class="flex justify-center space-x-6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-lg">© 2025 [Your Name]. Built with passion and creativity.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu and Animations -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // GSAP ScrollTrigger for Section Animations
+    document.querySelectorAll('.section-hidden').forEach((section) => {
+      gsap.to(section, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      });
+    });
+
+    // GSAP for Skill Card Animations
+    document.querySelectorAll('.skill-card').forEach((card) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      });
+    });
+  </script>
 </body>
 </html>
