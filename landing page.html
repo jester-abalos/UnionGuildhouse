@@ -318,9 +318,8 @@
                 <textarea name="message" placeholder="Type your message..." required></textarea>
                 <label class="terms">
                     <input type="checkbox" id="contact-terms-checkbox" disabled required />
-                    I accept the <span class="terms-link" id="open-modal">terms & conditions</span>
+                    Click and agree<span class="terms-link" id="open-modal">Terms & Conditions</span>
                 </label>
-                <p class="terms-helper">Please click ‘terms & conditions’ to read and accept the Terms and Conditions.</p>
                 <button type="submit" id="submit-button" class="btn-submit" disabled>Submit</button>
             </form>
         </section>
@@ -329,12 +328,12 @@
     <div id="terms-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="text-xl font-semibold">Terms and Conditions</h2>
+                <h2 class="text-xxl-font-semibold">Terms and Conditions</h2>
                 <button class="close-button" id="close-modal">×</button>
             </div>
             <div class="modal-body scrollbar-custom">
                 <p class="mb-4">These Terms and Conditions ("Agreement") govern all services provided by Union Guildhouse, a digital creative agency based in the Philippines, to clients worldwide. By engaging with our services, the Client agrees to be bound by the terms set forth below.</p>
-
+              <br>
                 <h3 class="text-xl font-semibold mt-6 mb-2">1. Services Offered</h3>
                 <p class="mb-2">Union Guildhouse offers creative and technical services across four main categories:</p>
                 <h4 class="text-lg font-medium mt-4">A. Web & Digital Services</h4>
@@ -414,6 +413,8 @@
         </div>
     </div>
 
+
+
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-top">
@@ -434,8 +435,8 @@
   </div>
   <div class="footer-bottom">
     <span>© 2025 Union Guildhouse. All rights reserved.</span>
-    <ul class="policy-links">
-      <li><a href="#">Privacy Policy</a></li>
+    <ul>
+      <li><a id="open-modal">Privacy Policy</a></li>
       <li><a href="#">Terms of Service</a></li>
       <li><a href="#">Cookies Settings</a></li>
     </ul>
