@@ -611,7 +611,8 @@ body {
             background: #cccccc;
             cursor: not-allowed;
         }
-        /* Modal Styles */
+
+        /* Modal for terms Styles */
         .modal {
             display: none;
             position: fixed;
@@ -624,6 +625,7 @@ body {
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
             background: #fff;
             max-width: 800px;
@@ -642,6 +644,11 @@ body {
             justify-content: space-between;
             align-items: center;
         }
+        
+        .text-xxl-font-semibold{
+           text-indent: 10.5em;
+        }
+
         .modal-body {
             padding: 2rem;
             overflow-y: auto;
@@ -691,6 +698,9 @@ body {
                 width: 95%;
             }
         }
+
+
+
 /* Footer */
 .footer {
   background-color: #f4faff;
@@ -748,6 +758,7 @@ body {
   color: #555;
   text-decoration: none;
 }
+
  /* Fully Responsive Enhancements for Small Screens */
 @media (max-width: 600px) {
   .navbar {
@@ -826,4 +837,3 @@ body {
     gap: 0.75rem;
   }
 }
-
