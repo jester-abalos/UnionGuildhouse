@@ -46,8 +46,9 @@ body {
       color: #FFFFFF;
     }
     .about-img {
-      object-fit: cover;
+      object-fit: fill;
       border-radius: 0.5rem;
+      height: max-content;  
     }
     .contact-form input,
     .contact-form textarea {
