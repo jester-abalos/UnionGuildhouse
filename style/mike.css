@@ -16,6 +16,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     /* Section fade-in animation trigger */
     .section-hidden {
       opacity: 0;
