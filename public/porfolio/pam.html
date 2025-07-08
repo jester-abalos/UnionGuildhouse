@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="/style/pamstyle.css" />
+    <link rel="stylesheet" href="/public/style/pamstyle.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -21,7 +21,7 @@
 
     <section id="hero" class="hero">
         <h1>Pamela Mae Sumañga</h1>
-        <img src="/assets/img/pamdp.jpg" alt="Profile Photo">
+        <img src="/public/assets/img/pamdp.jpg" alt="Profile Photo">
         <div class="social-icons">
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
@@ -146,7 +146,8 @@
             <!-- Slide Set 1 -->
             <div class="portfolio-group">
                 <div class="portfolio-item">
-                    <img src="/assets/img/samples/0000-8028135408307703088.png" alt="Sample Product 1">
+                    <img src="/public/assets/img/sample 1.png" alt="Sample Product 1">
+                    <a href="https://www.figma.com/proto/w4AnQTDFH7L02SKRcaKbaV/Samples-Pamela?node-id=37-372&p=f&t=ubqVRACJIAx4kOrX-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"></a>
                     <div class="overlay"><span>Sample Product 1</span></div>
                 </div>
                 <div class="portfolio-item">
@@ -284,30 +285,7 @@
         </div>
     </div>
 
-    <section id="testimonials" class="testimonials reveal">
-        <h2>Testimonials</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial active">
-                <img src="https://via.placeholder.com/80" alt="Client 1">
-                <p>"Jane's work is exceptional! Her designs are both beautiful and functional."</p>
-                <h4>Client Name</h4>
-            </div>
-            <div class="testimonial">
-                <img src="https://via.placeholder.com/80" alt="Client 2">
-                <p>"Working with Jane was a pleasure. She delivered beyond expectations."</p>
-                <h4>Client Name</h4>
-            </div>
-            <div class="testimonial">
-                <img src="https://via.placeholder.com/80" alt="Client 3">
-                <p>"Her creativity and attention to detail are unmatched."</p>
-                <h4>Client Name</h4>
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <button id="prev"><i class="fas fa-chevron-left"></i></button>
-            <button id="next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </section>
+  
 
     <section id="how-it-works" class="how-it-works reveal">
         <h2>How It Works</h2>
@@ -339,21 +317,8 @@
         </div>
     </footer>
 
-   <script src="/script/pamscript.js"></script>
-    <script>
-let currentGroup = 0;
+   <script src="/public/script/pamscript.js"></script>
 
-function slideSampleGroups() {
-    const track = document.querySelector('.portfolio-track');
-    const groups = document.querySelectorAll('.portfolio-group');
-    currentGroup = (currentGroup + 1) % groups.length;
-    track.style.transform = `translateX(-${currentGroup * 100}%)`;
-}
-
-setInterval(slideSampleGroups, 3000); // slide every 4 seconds
-
-
-    </script>
 </body>
 </html>
  
